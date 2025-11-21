@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Utilex - E-Commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .producto {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        button {
+            background: #0066ff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #004ccc;
+        }
+
+        #carrito {
+            margin-top: 25px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🛒 Bienvenido al E-Commerce de Utilex</h1>
+<p>Útiles escolares a tu alcance</p>
+
+<div class="producto">
+    <h3>Cuaderno A4</h3>
+    <p>Precio: S/ 12.50</p>
+    <button onclick="comprar('Cuaderno A4', 12.50)">Comprar</button>
+</div>
+
+<div class="producto">
+    <h3>Lapicero Azul</h3>
+    <p>Precio: S/ 2.00</p>
+    <button onclick="comprar('Lapicero Azul', 2.00)">Comprar</button>
+</div>
+
+<div class="producto">
+    <h3>Mochila Escolar</h3>
+    <p>Precio: S/ 75.00</p>
+    <button onclick="comprar('Mochila Escolar', 75.00)">Comprar</button>
+</div>
+
+<div class="producto">
+    <h3>Caja de Colores</h3>
+    <p>Precio: S/ 18.90</p>
+    <button onclick="comprar('Caja de Colores', 18.90)">Comprar</button>
+</div>
+
+<div id="carrito">
+    <h2>🛍 Detalle de compra</h2>
+    <p id="detalle">Aún no hay compras.</p>
+</div>
+
+<script>
+function comprar(nombre, precio) {
+    let cantidad = 1;  // simulación simple
+    let total = precio * cantidad;
+
+    document.getElementById("detalle").innerHTML =
+        `<strong>Producto:</strong> ${nombre}<br>
+         <strong>Precio unitario:</strong> S/ ${precio}<br>
+         <strong>Cantidad:</strong> ${cantidad}<br>
+         <strong>Total:</strong> S/ ${total.toFixed(2)}<br>
+         <br>¡Gracias por comprar en Utilex!`;
+}
+</script>
+
+</body>
+</html>
